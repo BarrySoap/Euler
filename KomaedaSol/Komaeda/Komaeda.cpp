@@ -37,10 +37,60 @@ void EulerProblemTwo()
 	printf("Euler Problem Two: %d \n", sum);
 }
 
+bool IsPrime(int number) 
+{
+	int multiples = 0;
+
+	if (number == 0 || number == 1) 
+	{
+		return false;
+	}
+
+	for (int i = 0; i < number; i++) 
+	{
+		for (int j = 0; j < number; j++) 
+		{
+			if (i != 1 && i != number) 
+			{
+				if (i * j == number) 
+				{
+					multiples++;
+				}
+			}
+		}
+	}
+
+	if (multiples == 0) 
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+}
+
+int PrimeFactor(double number) 
+{
+	while (IsPrime(number) == false) 
+	{
+
+	}
+}
+
+void EulerProblemThree() 
+{
+	int largestNumber = 600851475143;
+	int largestPrimeFactor = 0;
+
+	
+}
+
 int main()
 {
 	//EulerProblemOne();
-	EulerProblemTwo();
+	//EulerProblemTwo();
+	EulerProblemThree();
 
     return 0;
 }
